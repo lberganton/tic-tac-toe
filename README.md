@@ -39,11 +39,11 @@ it's time for player two to play, so the player one must wait, and so on.
 The plays are made by choosing a position between 1 and 9:
 
 ```
-1 | 2 | 3
+ 1 | 2 | 3
 ---+---+---
-4 | 5 | 6
+ 4 | 5 | 6
 ---+---+---
-7 | 8 | 9
+ 7 | 8 | 9
 ```
 
 The game can finish with one of the players winning, or with
