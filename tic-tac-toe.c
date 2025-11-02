@@ -7,7 +7,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 
-#define DEFAULT_PORT 7878
+#define DEFAULT_PORT 8080
 #define PLAYER_ONE_CHAR 'O'
 #define PLAYER_TWO_CHAR 'X'
 
@@ -217,14 +217,12 @@ int main(int argc, char *argv[]) {
     return 1;
   }
 
-  if (port == 0) {
-    port = DEFAULT_PORT;
-  }
+  port = port == 0 ? DEFAULT_PORT : port;
 
-  if (strncmp("create", argv[optind], 6) == 0) {
+  if (strcmp("create", argv[optind]) == 0) {
     return create_server(port);
   }
-  if (strncmp("connect", argv[optind], 7) == 0) {
+  if (strcmp("connect", argv[optind]) == 0) {
     return connect_server(port);
   }
 
